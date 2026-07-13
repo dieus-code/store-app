@@ -6,8 +6,8 @@ import Header from "~/components/header";
 
 export  default function Landing() {
   return (
-    <div>
-
+    <div >
+     <Header/>
      <Dashboard/>
      <Footer/>
     </div>

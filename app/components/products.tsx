@@ -1,7 +1,7 @@
 import react from "react";
 import { Link } from "react-router";
 import hat from "../assets/images/hat.jpg";
-
+import hat3 from "../assets/model-image/hat3.jpeg"; // Import the images
 export default function Products() {
 
   return (
@@ -15,6 +15,7 @@ export default function Products() {
         <p>$19.99</p>
        
       </div>
+       
       </Link>
     </div>
   );

@@ -11,9 +11,7 @@ export default function Home() {
       <Products />
        <Products />
         <Products />
-         <Products />
-          <Products />
-           <Products />
+        
       </div>
     </div>
   );

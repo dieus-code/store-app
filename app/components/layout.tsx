@@ -7,7 +7,7 @@ import Products from "./products";
 
 export default function Layout() {
   return (
-    <div className="min-w-50 ">
+    <div className="min-w-50 bg-blue-400">
       <Header />
       <main>
         <Outlet />

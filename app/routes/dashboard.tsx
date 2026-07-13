@@ -6,8 +6,8 @@ import Product from "~/components/products";
 
 export default function Dashboard() {
     return (
-       <div>
-        <Navbar />
+       <div className="bg-blue-400">
+        
         <div className="relative h-screen">
           <img
             src={bgImage}
