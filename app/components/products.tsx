@@ -1,11 +1,12 @@
 import react from "react";
+import { Link } from "react-router";
 import hat from "../assets/images/hat.jpg";
 
 export default function Products() {
 
   return (
     <div >
-      <a href="/product">
+      <Link to="/product">
      <div className="bg-blue-400 border border-gray-800 w-70 h-100 p-4 rounded-lg shadow-md hover:shadow-blue-50 transition duration-300 " >
          <div >
           <img src={hat} alt="Product Image" className="w-70 h-75" />
@@ -14,7 +15,7 @@ export default function Products() {
         <p>$19.99</p>
        
       </div>
-      </a>
+      </Link>
     </div>
   );
 }
