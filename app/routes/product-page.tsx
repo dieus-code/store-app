@@ -12,7 +12,7 @@ export default function ProductPage() {
   return (
     <div className="bg-blue-400  h-screen">
         
-     <div className=" flex bg-white border border-gray-800  h-100 p-4 rounded-lg shadow-md hover:shadow-blue-50 transition duration-300" onClick={() => alert("Product clicked!")}>
+     <div className=" flex-wrap bg-white border border-gray-800  h-100 p-4 rounded-lg shadow-md hover:shadow-blue-50 transition duration-300" onClick={() => alert("Product clicked!")}>
          
            <img src={hat} alt="Product Image" className="w-70 h-75 m-10"/>
            <img src={hat2} alt="Model Image 2" className="w-70 h-75 m-10 object-cover rounded" />
