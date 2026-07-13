@@ -7,13 +7,13 @@ export default function Home() {
      <span className="text-xl font-bold"><p>fashion</p></span>
      <span className="text-lg font-bold"><p>mens hats</p></span>
       <div className="flex flex-wrap justify-center gap-4">
-     <a href="/product"> <Products /></a>
-      <a href="/product"> <Products /></a>
-       <a href="/product"> <Products /></a>
-        <a href="/product"> <Products /></a>
-         <a href="/product"> <Products /></a>
-          <a href="/product"> <Products /></a>
-           <a href="/product"> <Products /></a>
+     <Products />
+      <Products />
+       <Products />
+        <Products />
+         <Products />
+          <Products />
+           <Products />
       </div>
     </div>
   );
