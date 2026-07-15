@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Header from "./header";
 import Sidebar from "./sidebar";
 import Footer from "./footer";
-import Products from "./products";
+import Products from "../routes/product-page";
 
 export default function Layout() {
   return (

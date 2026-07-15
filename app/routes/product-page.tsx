@@ -1,31 +1,38 @@
 import React from "react";
-import hat from "../assets/images/hat.jpg"; // Import the image
-import hat1 from "../assets/model-image/hat1.jpeg"; // Import the images
-import hat2 from "../assets/model-image/hat2.jpeg"; // Import the images
-import hat3 from "../assets/model-image/hat3.jpeg"; // Import the images
-import hat4 from "../assets/model-image/hat4.jpeg"; // Import the images
-import Card from "~/components/ card";
+import{useEffect, useState} from "react";
+import{useParams} from "react-router-dom";
 
+export default function ProductDetails(){
+const {id} = useParams();
+const [productdetail, setProductdetail] = useState<any>(null);
+useEffect(()=>{
+    const fetchProduct = async () => {
+        try{
+            const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+            const data = await response.json();
+            setProductdetail(data);
+            console.log(`done`);
+        }catch(error){
+            console.error("Error fetching product:", error);
+        }
+    };
+    fetchProduct();
+},[id]);
 
-
-
-export default function ProductPage() {
-  return (
-    <div className= " justify-center bg-blue-400 w-fit h-screen">
-        
-     <div className=" flex flex-col bg-white border border-gray-800  w-200 p-4 rounded-lg shadow-md hover:shadow-blue-50 ">
-         
-           <img src={hat} alt="Product Image" className="w-70 h-70 m-10"/>
-           
-            <div className="flex flex-col justify-center ml-10 text-cyan-600">
-        <p>name: baseball hats</p>
-        <p>price: $19.99</p>
-        <p>Description of the product.</p>
-          </div>
-        
-      
-      
-    </div>
-    </div>
-  );
+    return(
+        <div className="flex flex-wrap justify-center gap-1 h-50% w-50%">
+            {productdetail ? (
+                <div className="flex-wrap  bg-white border border-gray-800 h-fit w-fit p-4 rounded-lg shadow-md hover:shadow-blue-50 justify-content-center align-baseline text-black m-2 h-50% w-zzzzz50%" >
+                    <div className="flex justify-center items-center border-2 border-gray-800 rounded-lg w-50% h-25%">
+                    <img src={productdetail.image} alt={productdetail.title} />
+                    </div>
+                    <h1>{productdetail.title}</h1>
+                    <p>${productdetail.price.toFixed(2)}</p>
+                    <p>{productdetail.description}</p>
+                </div>
+            ) : (
+                <p>Product not found</p>
+            )}
+        </div>
+    );
 }

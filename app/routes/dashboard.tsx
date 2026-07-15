@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/navbar";
 import bgImage from "../assets/images/starry-night.jpeg";    
 import Footer from "~/components/footer";
-import Product from "~/components/products";
+import Product from "~/routes/product-page";
 
 export default function Dashboard() {
     return (

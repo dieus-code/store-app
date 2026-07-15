@@ -14,7 +14,7 @@ export default [
   layout("components/layout.tsx", [
     route("dashboard", "routes/dashboard.tsx"),
     route("home", "routes/home.tsx"),
-    route("product", "routes/product-page.tsx"),
+    route("details/:id", "routes/product-page.tsx"),
   ]),
   
 
