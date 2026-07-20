@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/navbar";
 import bgImage from "../assets/images/starry-night.jpeg";    
 import Footer from "~/components/footer";
-import Product from "~/routes/product-page";
+
 
 export default function Dashboard() {
     return (
@@ -18,10 +18,7 @@ export default function Dashboard() {
             <h1 className="text-4xl font-bold text-white font-style-italic">Welcome to the binny buy</h1>
           </div>
         </div>
-        <div className="bg-blue-600 text-white py-8 px-4 text-center">
-            <p className="text-xl text-white">Get amazing products and deals!</p>
-            <Product/>
-          </div>
+        
        </div>
            
       
