@@ -7,7 +7,7 @@ export default function NavBar() {
   const { totalItems, totalPrice } = useCart();
 
   return (
-    <nav className="bg-transparent border-b border-blue-200 shadow-sm">
+    <nav className="bg-blue-400 border-b border-blue-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <ul className="flex items-center space-x-8 text-sm font-medium text-blue-100">
           <li>
@@ -36,7 +36,7 @@ export default function NavBar() {
           </li>
         </ul>
 
-        {/* 2. Cart Summary Badge */}
+      
         <div className="flex items-center gap-4">
           <Link 
             to="/cart" 

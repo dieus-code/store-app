@@ -75,7 +75,7 @@ export default function Cart() {
                 </p>
               </div>
 
-              {/* Quantity Controls */}
+             
               <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden bg-gray-50">
                 <button
                   onClick={() => updateQuantity(item.id, item.quantity - 1)}
