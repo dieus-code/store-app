@@ -17,7 +17,7 @@ export default function AboutPage(){
               <h2 className="text-2xl font-bold text-white my-20 mb-2">SHOP WITH US</h2>
         
         <Link
-          to="/home"
+          to="/store"
           className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition"
         >
           Start Shopping

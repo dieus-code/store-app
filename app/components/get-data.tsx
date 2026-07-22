@@ -6,7 +6,7 @@ export default function GetData(id?: string | number) {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Construct URL dynamically depending on whether an ID was passed
+
     const url = id
       ? `https://fakestoreapi.com/products/${id}`
       : "https://fakestoreapi.com/products";

@@ -34,7 +34,7 @@ export default function ProductDetails() {
           to="/"
           className="inline-block bg-gray-800 text-white px-5 py-2.5 rounded-lg hover:bg-black transition"
         >
-          ← Back to All Products
+        Back to All Products
         </Link>
       </div>
     );
@@ -42,17 +42,17 @@ export default function ProductDetails() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      {/* Back Link */}
+     
       <Link
-        to="/home"
+        to="/store"
         className="inline-flex items-center text-sm font-medium text-gray-600 hover:text-black mb-6 transition"
       >
-        ← Back to store
+         Back to store
       </Link>
 
-      {/* Main Details Card */}
+    
       <div className="bg-white border border-gray-800 rounded-xl p-6 md:p-8 shadow-md grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-black">
-        {/* Product Image */}
+       
         <div className="flex justify-center items-center border border-gray-200 rounded-lg p-6 h-80 bg-white">
           <img
             src={product.image}

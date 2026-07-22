@@ -4,11 +4,11 @@ import GetData from "./get-data";
 import { useCart } from "./cartContext";
 
 export default function GetProducts() {
-  // 1. Destructure loading and error alongside products
+
   const { products, loading, error } = GetData();
   const { addToCart } = useCart();
 
-  // 2. Guard against initial render while data is fetching
+
   if (loading) {
     return (
       <div className="text-center p-8 text-lg font-medium text-gray-600">
@@ -17,7 +17,7 @@ export default function GetProducts() {
     );
   }
 
-  // 3. Guard against errors or products being null/empty
+  
   if (error || !products || !Array.isArray(products)) {
     return (
       <div className="text-center p-8 text-red-500 font-medium">
@@ -26,7 +26,7 @@ export default function GetProducts() {
     );
   }
 
-  // 4. Safe to render .map() now!
+
   return (
     <div className="flex flex-wrap justify-center gap-4 p-4">
       {products.map((product: any) => (

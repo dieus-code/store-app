@@ -12,7 +12,7 @@ export default function NavBar() {
         <ul className="flex items-center space-x-8 text-sm font-medium text-blue-100">
           <li>
             <Link 
-              to="/home" 
+              to="/store" 
               className="relative py-1 transition-colors duration-200 hover:text-blue-600"
             >
              store
