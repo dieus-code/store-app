@@ -1,16 +1,16 @@
 import React from "react";
 import { useParams, Link } from "react-router";
 import GetData from "./get-data";
-import { useCart } from "./cartContext"; // Remove or adjust if you aren't using cartContext
+import { useCart } from "./cartContext"; 
 
 export default function ProductDetails() {
-  // 1. Grab the dynamic ":id" from the route URL
+
   const { id } = useParams<{ id: string }>();
 
-  // 2. Fetch the single product by passing the id into your hook
+
   const { products: product, loading, error } = GetData(id);
 
-  // 3. Optional: Access cart context
+
   const { addToCart } = useCart();
 
   if (loading) {

@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router";
 import GetData from "./get-data";
-
+import { useCart } from "./cartContext"; 
 
 export default function GetProducts() {
 
   const { products, loading, error } = GetData();
-  
-
+   const { addToCart } = useCart();
 
   if (loading) {
     return (
@@ -50,9 +49,15 @@ export default function GetProducts() {
             </p>
           </Link>
 
-         
+         <button
+            onClick={() => addToCart && addToCart(product)}
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition"
+          >
+            Add to Cart
+          </button>
         </div>
       ))}
+      
     </div>
   );
 }
