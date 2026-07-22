@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router";
 import GetData from "./get-data";
-import { useCart } from "./cartContext";
+
 
 export default function GetProducts() {
 
   const { products, loading, error } = GetData();
-  const { addToCart } = useCart();
+  
 
 
   if (loading) {
