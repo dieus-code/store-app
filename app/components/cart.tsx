@@ -26,7 +26,7 @@ export default function Cart() {
       {/* Header with Clear Cart Button */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold text-gray-900">
-          Shopping Cart <span className="text-lg font-medium text-gray-500">({totalItems} items)</span>
+          Shopping Cart 
         </h1>
         
         {/* CLEAR CART BUTTON */}
@@ -94,7 +94,7 @@ export default function Cart() {
                 </button>
               </div>
 
-              {/* Remove Single Item */}
+              {/* Remove Single Item  */}
               <button
                 onClick={() => removeFromCart(item.id)}
                 className="text-gray-400 hover:text-red-500 p-2 transition"
@@ -106,9 +106,9 @@ export default function Cart() {
           ))}
         </div>
 
-        {/* Order Summary Box */}
+       
         <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm h-fit text-black">
-          <h2 className="text-xl font-bold mb-4 border-b pb-2">Order Summary</h2>
+          <h2 className="text-xl font-bold mb-4  pb-2">Order Summary</h2>
 
           <div className="space-y-2 mb-4 text-sm">
             <div className="flex justify-between text-gray-600">
