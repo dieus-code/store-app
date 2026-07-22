@@ -13,7 +13,9 @@ export default [
 
 layout("components/layout.tsx", [
   route("dashboard", "routes/dashboard.tsx"),
-  route("home", "routes/home.tsx"),
+  route("store", "routes/home.tsx"),
+  route("about", "routes/about.tsx"),
+  route("contact", "routes/contact.tsx"),
   route("details/:id", "components/product-page.tsx"),
   route("cart", "components/cart.tsx"), // Fixed string path
 ]),

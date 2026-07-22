@@ -15,7 +15,7 @@ export default function NavBar() {
               to="/home" 
               className="relative py-1 transition-colors duration-200 hover:text-blue-600"
             >
-              Home
+             store
             </Link>
           </li>
           <li>
