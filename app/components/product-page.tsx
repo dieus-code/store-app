@@ -2,15 +2,12 @@ import React from "react";
 import { useParams, Link } from "react-router";
 import GetData from "./get-data";
 import { useCart } from "./cartContext"; 
+import RelatedProducts from "./relatedProducts"; 
 
 export default function ProductDetails() {
 
   const { id } = useParams<{ id: string }>();
-
-
   const { products: product, loading, error } = GetData(id);
-
-
   const { addToCart } = useCart();
 
   if (loading) {
@@ -76,7 +73,7 @@ export default function ProductDetails() {
             </p>
           </div>
 
-          {/* Add to Cart Button */}
+         
           <button
             onClick={() => addToCart && addToCart(product)}
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition"
@@ -85,6 +82,7 @@ export default function ProductDetails() {
           </button>
         </div>
       </div>
+      <RelatedProducts category={product.category} currentProductId={product.id} />
     </div>
   );
 }

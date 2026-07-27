@@ -1,5 +1,4 @@
 import React from "react";
-import natureimg from "../assets/images/Nature.jpeg";  
 import storeimg from "../assets/images/store.jpeg";  
 import{Link} from "react-router"
 export default function AboutPage(){

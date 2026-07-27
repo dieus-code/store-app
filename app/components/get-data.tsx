@@ -12,6 +12,7 @@ export default function GetData(id?: string | number) {
       : "https://fakestoreapi.com/products";
 
     const fetchData = async () => {
+      setError("");
       try {
         setLoading(true);
         setError(null);

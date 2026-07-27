@@ -12,7 +12,7 @@ export default function Layout() {
     <div className="min-w-50 bg-blue-400">
       <CartProvider>
       <Header />
-      <main>
+      <main >
         
         <Outlet />
        

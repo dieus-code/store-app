@@ -23,7 +23,7 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider = ({ children }: { children: any }) => {
   const [cart, setCart] = useState<CartItem[]>(() => {
-    if (typeof window === "undefined") return [];
+   
     try {
       const savedCart = localStorage.getItem("shopping_cart");
       if (!savedCart) return [];
@@ -114,8 +114,8 @@ export const CartProvider = ({ children }: { children: any }) => {
 // Explicit named export
 export const useCart = (): CartContextType => {
   const context = useContext(CartContext);
-  if (!context) {
+    if (!context) {
     throw new Error("useCart must be used within a CartProvider");
-  }
+    }
   return context;
 };
