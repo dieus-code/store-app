@@ -50,7 +50,8 @@ export default function GetProducts() {
               key={product.id}
               className="flex flex-col justify-between bg-white border border-gray-800 w-64 p-4 rounded-lg shadow-md hover:shadow-lg transition text-black"
             >
-              <Link to={`/details/${product.id}`} className="flex flex-col items-center">
+               {/* link to details page  */}
+              <Link to={`/details/${product.id}`} className="flex flex-col items-center"> 
                 <div className="bg-gray-500 flex justify-center items-center border border-gray-200 rounded-lg w-full h-48 p-2 mb-3">
                   <img
                     src={product.image}

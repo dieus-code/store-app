@@ -7,6 +7,7 @@ import RelatedProducts from "./relatedProducts";
 export default function ProductDetails() {
 
   const { id } = useParams<{ id: string }>();
+  // custom hooks for the product object from fetch component and the usecart hook for the addtocart funtion 
   const { products: product, loading, error } = GetData(id);
   const { addToCart } = useCart();
 
@@ -39,7 +40,7 @@ export default function ProductDetails() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-     
+     {/* back to store button */}
       <Link
         to="/store"
         className="inline-flex items-center text-sm font-medium text-gray-600 hover:text-black mb-6 transition"
@@ -49,7 +50,7 @@ export default function ProductDetails() {
 
     
       <div className="bg-white border border-gray-800 rounded-xl p-6 md:p-8 shadow-md grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-black">
-       
+       {/* image container */}
         <div className="flex justify-center items-center border border-gray-200 rounded-lg p-6 h-80 bg-white">
           <img
             src={product.image}
@@ -82,6 +83,7 @@ export default function ProductDetails() {
           </button>
         </div>
       </div>
+      {/* related section */}
       <RelatedProducts category={product.category} currentProductId={product.id} />
     </div>
   );
