@@ -70,12 +70,10 @@ export default function Cart() {
                   >
                     {item.title}
                   </Link>
-                  <p className="text-green-600 font-bold mt-1">
-                    ${(item.price * item.quantity).toFixed(2)}
+                  <p className="text-balck font-bold mt-1">
+                    ${(item.price ).toFixed(2)}
                   </p>
-                  <p className="text-xs text-gray-500">
-                    ${item.price.toFixed(2)} each
-                  </p>
+                  
                 </div>
               </div>
 
@@ -123,18 +121,18 @@ export default function Cart() {
             </div>
             <div className="flex justify-between text-gray-600">
               <span>Shipping</span>
-              <span className="text-green-600 font-medium">FREE</span>
+              <span className="text-black font-medium">FREE</span>
             </div>
           </div>
 
           <div className="border-t border-gray-200 pt-4 flex justify-between font-bold text-lg mb-6">
             <span>Total</span>
-            <span className="text-green-600">${totalPrice.toFixed(2)}</span>
+            <span className="text-black">${totalPrice.toFixed(2)}</span>
           </div>
 
           <button
             onClick={() => alert("Proceeding to checkout...")}
-            className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition shadow-md"
+            className="w-full bg-black hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition shadow-md"
           >
             Checkout
           </button>

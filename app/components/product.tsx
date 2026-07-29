@@ -48,10 +48,11 @@ export default function GetProducts() {
           {filteredProducts.map((product: any) => (
             <div
               key={product.id}
-              className="flex flex-col justify-between bg-white border border-gray-800 w-64 p-4 rounded-lg shadow-md hover:shadow-lg transition text-black"
+              className="flex flex-col justify-between bg-amber-900 border border-gray-800 w-64 p-4 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition text-black"
             >
-              <Link to={`/details/${product.id}`} className="flex flex-col items-center">
-                <div className="bg-gray-500 flex justify-center items-center border border-gray-200 rounded-lg w-full h-48 p-2 mb-3">
+               {/* link to details page  */}
+              <Link to={`/details/${product.id}`} className="flex flex-col items-center"> 
+                <div className="bg-amber-200 flex justify-center items-center border border-gray-200 rounded-lg w-full h-48 p-2 mb-3">
                   <img
                     src={product.image}
                     alt={product.title}
@@ -73,7 +74,7 @@ export default function GetProducts() {
                   e.stopPropagation();
                   addToCart && addToCart(product);
                 }}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition"
+                className="w-full bg-black hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition"
               >
                 Add to Cart
               </button>

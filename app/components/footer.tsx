@@ -3,7 +3,7 @@ import { Link } from "react-router"; // Use "react-router-dom" if using classic 
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 border-t border-gray-800">
+    <footer className="bg-amber-950 text-gray-300 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar / Copyright */}
-        <div className="border-t border-gray-800 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500">
+        <div className="border-t border-amber-950 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500">
           <p>© {new Date().getFullYear()} Binny Buy. All rights reserved.</p>
           <div className="flex gap-4 mt-4 sm:mt-0">
             <a href="#terms" className="hover:text-gray-400 transition">Terms of Service</a>

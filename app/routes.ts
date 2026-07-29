@@ -7,6 +7,7 @@ import {
 } from "@react-router/dev/routes";
 import Cart from "./components/cart";
 export default [
+  
   index(  "routes/landing.tsx" ),
  
  
