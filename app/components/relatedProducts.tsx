@@ -50,7 +50,7 @@ export default function RelatedProducts({ category, currentProductId }: RelatedP
   if (related.length === 0) return null;
 
   return (
-    <section className="mt-16 pt-8 border-t border-gray-200">
+    <section className="mt-16 pt-8 border-t border-gray-950">
       <h2 className="text-2xl font-bold text-gray-900 mb-6">
         You Might Also Like
       </h2>
@@ -60,10 +60,10 @@ export default function RelatedProducts({ category, currentProductId }: RelatedP
         {related.map((product) => (
           <div
             key={product.id}
-            className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm hover:shadow-md transition flex flex-col justify-between"
+            className="bg-amber-900 rounded-xl border border-gray-200 p-4 shadow-sm hover:shadow-md transition flex flex-col justify-between"
           >
             <Link to={`/details/${product.id}`} className="block group">
-              <div className="h-40 w-full flex items-center justify-center p-2 mb-3 bg-gray-50 rounded-lg">
+              <div className="h-40 w-full flex items-center justify-center p-2 mb-3 bg-amber-200 rounded-lg">
                 <img
                   src={product.image}
                   alt={product.title}
@@ -76,12 +76,12 @@ export default function RelatedProducts({ category, currentProductId }: RelatedP
             </Link>
 
             <div className="mt-4 flex items-center justify-between">
-              <span className="text-base font-bold text-green-600">
+              <span className="text-base font-bold text-black">
                 ${product.price.toFixed(2)}
               </span>
               <button
                 onClick={() => addToCart(product)}
-                className="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition"
+                className="bg-black hover:bg-blue-700 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition"
               >
                 + Add
               </button>

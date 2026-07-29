@@ -9,7 +9,7 @@ import { CartProvider } from "./cartContext";
 export default function Layout() {
   return (
 
-    <div className="min-w-50 bg-blue-400">
+    <div className="min-w-50  bg-amber-200">
       <CartProvider>
       <Header />
       <main >

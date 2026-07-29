@@ -7,7 +7,7 @@ export default function NavBar() {
   const { totalItems } = useCart();
 
   return (
-    <nav className="bg-blue-400 border-b border-blue-200 shadow-sm">
+    <nav className="bg-amber-900 border-b border-blue-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <ul className="flex items-center space-x-8 text-sm font-medium text-black">
           <li>
@@ -15,7 +15,7 @@ export default function NavBar() {
               to="/store" 
               className="  relative py-1 transition-colors duration-200 hover:text-blue-600"
             >
-             store
+             Store
             </Link>
           </li>
           <li>
@@ -39,9 +39,9 @@ export default function NavBar() {
         <div className="flex items-center gap-4">
           <Link 
             to="/cart" 
-            className="bg-gray-800 border border-gray-700 px-3 py-1.5 rounded-lg text-sm font-semibold text-white hover:bg-gray-700 transition"
+            className="bg-amber-200 border border-gray-700 px-3 py-1.5 rounded-lg text-sm font-semibold text-black hover:bg-gray-700 transition"
           >
-            🛒 Cart: <span className="text-green-400">{totalItems}</span> 
+            🛒 Cart: <span className="text-grey-400">{totalItems}</span> 
           </Link>
         </div>
       </div>

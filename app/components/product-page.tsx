@@ -49,9 +49,9 @@ export default function ProductDetails() {
       </Link>
 
     
-      <div className="bg-white border border-gray-800 rounded-xl p-6 md:p-8 shadow-md grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-black">
+      <div className="bg-amber-800 border border-gray-800 rounded-xl p-6 md:p-8 shadow-md grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-black">
        {/* image container */}
-        <div className="flex justify-center items-center border border-gray-200 rounded-lg p-6 h-80 bg-white">
+        <div className="flex justify-center items-center border border-gray-200 rounded-lg p-6 h-80 bg-amber-200">
           <img
             src={product.image}
             alt={product.title}
@@ -62,14 +62,14 @@ export default function ProductDetails() {
         {/* Product Information */}
         <div className="flex flex-col justify-between h-full">
           <div>
-            <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider">
+            <span className="text-xs font-semibold text-black uppercase tracking-wider">
               {product.category}
             </span>
             <h1 className="text-2xl font-bold mt-1 mb-3">{product.title}</h1>
-            <p className="text-2xl font-extrabold text-green-600 mb-4">
+            <p className="text-2xl font-extrabold text-gray-950 mb-4">
               ${product.price?.toFixed(2)}
             </p>
-            <p className="text-gray-700 text-sm leading-relaxed mb-6">
+            <p className="text-black text-sm leading-relaxed mb-6">
               {product.description}
             </p>
           </div>
@@ -77,7 +77,7 @@ export default function ProductDetails() {
          
           <button
             onClick={() => addToCart && addToCart(product)}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition"
+            className="w-full bg-black hover:bg-gray-500 text-white font-medium py-3 px-6 rounded-lg transition"
           >
             Add to Cart
           </button>
